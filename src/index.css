@@ -1,0 +1,188 @@
+.todo{
+  border-radius: 23px 23px 23px ;
+  width: 450px;
+  background-color:hsla(272, 43%, 52%, 0.226);
+   padding: 2rem;
+}
+#adder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,#reset-button,#button,.btn-success,p{
+  border-radius: 23px 23px 23px;
+} 
+
+.pp{
+  
+  font-size: larger;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+
+} 
+#datas{
+  display: flex;
+  justify-content: space-between;
+  gap: 123px;
+}
+#lamp{
+  display: flex;
+}
+#datas:hover{
+  background-color: rgba(0, 128, 255, 0.453);
+  box-shadow: 2px 4px 9px 8px rgba(245, 245, 245, 0.507);
+}
+#lamp:hover{
+  background-color: rgba(255, 0, 0, 0.795); 
+}
+input{
+  background-color:hsla(272, 43%, 52%, 0.226);
+  color: antiquewhite;
+}
+
+ /* body{
+  background-color: rgb(90, 47, 47);
+ } */
+ 
+label{
+  color: wheat;
+}
+.formedd {
+  display: flex;
+   top: 1rem;
+   position: relative;
+   right: .1%;
+   bottom: 1%;
+  flex-direction:column;
+  text-align: center;
+  background-color:hsla(272, 43%, 52%, 0.226);
+  border-radius: 23px 23px 23px ;
+  width: 605px;
+  
+}
+.formes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: linear-gradient(to right,rgb(84, 53, 196),rgb(175, 152, 255));
+  border-radius: 23px;
+  padding: 20px;
+  margin: 55px;
+  border: 3px solid rgb(0, 7, 12);
+  height: 640px;  
+  min-width:auto;
+  width: 380px;
+  transition: all .2s;
+}
+#products:hover ,.todo:hover{
+  transform: scale(0.98);
+  border-radius: 20px;
+  background-color: #42116d;
+ }
+ 
+ #products:hover  {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+ }
+
+
+
+
+#products img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: 200px; /* Allow image height to adjust accordingly */
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+  
+}
+.quotes{display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: hsla(61, 46%, 38%, 0.953);
+  border-radius: 23px;
+  padding: 2px;
+  flex-direction: row;
+  margin: 55px;
+  border: 3px solid rgb(165, 13, 13);
+  height: 239px;
+  min-width:auto;
+  width: 390px;
+
+} 
+#quot{
+  display: inline-block;
+}
+.container{
+  
+  border: 1px solid rgba(8, 0, 2, 0.256);
+  background-image: url(/public/media/weather.jpeg);
+  height: 43rem;
+  width: 25rem;
+  background-size: cover;
+  border-radius: 2rem;
+  box-shadow: 2px 22px 45px rgba(123, 150, 248, 0.193);
+  top: 12rem;
+}
+#field{
+  display: flex;
+}
+/* task*/
+
+#pro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background:rgba(165, 42, 42, 0.781);
+  border-radius: 23px;
+  padding: 20px;
+  margin: 55px;
+  border: 3px solid rgb(0, 7, 12);
+  min-height: 300px;  /* Changed from height to min-height */
+  min-width:auto;
+  width: 380px;
+  transition: all .2s;
+}
+
+#pro:hover{
+  transform: scale(0.98);
+  border-radius: 20px;
+  background-color: #42116d;
+}
+ 
+#pro:hover  {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+#pro img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  height: 100px; /* Allow image height to adjust accordingly */
+  object-fit: cover; /* Cover the entire container while maintaining aspect ratio */
+}
+/* CSS for a multicolor linear gradient background */
+body {
+  background:rgb(44, 35, 35);
+}
+body {
+  /* Default styles for desktops and larger devices */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Styles for tablets and smaller devices */
+@media screen and (max-width: 868px) {
+  body {
+      font-size: 14px;
+  }
+}
+/*#task{ 
+  /* background: linear-gradient(to right,rgb(56, 28, 28),rgb(120, 120, 188),rgb(146, 96, 15)); */  

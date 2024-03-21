@@ -1,0 +1,33 @@
+ .navi{
+    background: linear-gradient(to right,rgb(84, 53, 196),rgb(175, 152, 255));
+ }
+ a{
+    color: wheat;
+    text-decoration:none; 
+    
+ } 
+ a:hover{
+    color: rgba(150, 79, 216, 0.805);
+   }
+   .sun {
+    animation: roll 20s linear infinite;
+    width: 310px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   } 
+   
+   @keyframes roll {
+      from {
+         transform: rotate(0deg);
+       }
+       to {
+         transform: rotate(360deg);
+       }
+  }
+.cold{
+/* mix-blend-mode: screen; */
+border-radius: 51px 51px 51px;
+  }
+  
