@@ -19,6 +19,7 @@ const Weather = () => {
   }, []);
   return (
     <div className="container">
+      
       <div className="row">
         <div className="col-md-6" id="field">
           <input
@@ -29,7 +30,7 @@ const Weather = () => {
             className="ms-4 mt-4"
             style={{ height: "2.3rem" }}
             type="search"
-            placeholder="search city"
+            placeholder="search city or Country"
           />
           <button
             onClick={handlesearch}
@@ -40,13 +41,14 @@ const Weather = () => {
             search
           </button>
         </div>
+
+        
         <p className="pp mt-5">
-          Temperature of {data?.name} :{(data?.main?.temp - 273.15).toFixed(2)}
-          °C{" "}
+          Temperature of {data?.name} :{(data?.main?.temp - 273.15).toFixed(2)}{" "}°C
         </p>
         <p style={{ color: "wheat", textAlign: "center" }}>
           Minmum Temp {data?.name} :{(data?.main?.temp_min - 273.15).toFixed(2)}
-          °C{" "}
+         {""}  °C
         </p>
 
         {data?.main?.temp - 273.15 > 29 ? (
