@@ -6,8 +6,7 @@ import Des from "./components/Des";
 import Form from "./components/Form";
 import Todo from "./components/Todo";
 import Products from "./components/Products";
-import Loop from "./components/Loop";
-import Dom from "./components/Dom";
+ import Dom from "./components/Dom";
 import Effect from "./components/Effect";
 import Addition from "./components/Addition";
 import Memo from "./components/Memo";
@@ -31,6 +30,7 @@ import Nav from "./components/Navbar";
 import Task from "./components/Task";
 import Home from "./components/Home";
 import BasicTextFields from "./components/BasicTextFields.js";
+import ResponsiveAppBar from "./components/ResponsiveAppBar.js";
  
 function App() {
    
@@ -45,6 +45,7 @@ function App() {
             <Link to="/ShopCart">E-commerce Site</Link>
             <Link to="/Cart">Cart</Link>
             <Link to="/muiform">Mui Form</Link>
+            <Link to="/portfolio">Portfolio</Link>
              
           
         </div>
@@ -56,6 +57,7 @@ function App() {
           <Route element = {<Task/>} path="/Cart"/>
           <Route element = {<Home/>} path="/home"/>
           <Route element = {<BasicTextFields/>} path="/muiform"/>
+          <Route element = {<ResponsiveAppBar/>} path="/portfolio"/>
  
         </Routes>
       </BrowserRouter>
