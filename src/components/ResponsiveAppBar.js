@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
- 
+import { Skills } from "./Skills";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -34,7 +34,6 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-   
 
   return (
     <div id="port">
@@ -180,22 +179,62 @@ function ResponsiveAppBar() {
                 Hey I'm Sumit , a front end developer
               </p>
             </div>
-          
-            <div className="row mt-5 ms-5" style={{ paddingTop: "6.5rem" }}>  
+            <div className="row mt-5 ms-5" style={{ paddingTop: "6.5rem" }}>
               <img id="sumit" className="col-md-6" src="/media/bhagat.png" />
               <p
-                className="col-md-6  text-white"
-                style={{ fontFamily: "cursive", fontSize: "23px",padding:"1rem",background:"hsla(272, 59%, 55%, 0.508)" }}
-              > <h2 style={{color:"wheat",fontFamily:"cursive"}} >About</h2>
-                I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently, I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS. My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively.
-
-
-                <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf" > <Button variant="contained" color="success">Download cv</Button></a>
+                className="col-md-6  about  text-white"
+                style={{
+                  fontFamily: "cursive",
+                  fontSize: "23px",
+                  padding: "1rem",
+                  background: "hsla(272, 59%, 55%, 0.508)",
+                }}
+              >
+                {" "}
+                <h2 style={{ color: "wheat", fontFamily: "cursive" }}>About</h2>
+                I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with
+                a fervent passion for Front-End Development. Currently, I am
+                broadening my expertise by immersing myself in HTML, CSS,
+                JavaScript, and React JS. My proficiency extends to various
+                frameworks and libraries, including Material-UI, Tailwind CSS,
+                and Bootstrap, which empower me to create responsive and
+                user-centric designs. I firmly believe in the transformative
+                power of technology to resolve challenges and simplify our
+                lives. My commitment is to the creation of interfaces that are
+                not only efficient but also visually captivating. With a solid
+                grounding in engineering and a flair for design, I am eager to
+                confront the digital era’s challenges. My aspiration is to blend
+                my varied skills to develop innovative solutions that delight
+                and serve users effectively.
+                <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf">
+                  {" "}
+                  <Button variant="contained" color="success">
+                    Download cv
+                  </Button>
+                </a>
               </p>
-              
             </div>
-             
-             
+            <h3
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                fontFamily: "cursive",
+                color: "wheat",
+                marginTop: "5rem",
+              }}
+            >
+              Skills
+            </h3>
+            <div className="row skilll ms-4">
+              {Skills.map((skill, i) => (
+                <div className="col-md-3">
+                  {" "}
+                  <p key={i}></p>
+                  <img className="skil" src={skill.image} alt="skills" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

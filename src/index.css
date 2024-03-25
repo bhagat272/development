@@ -72,7 +72,7 @@ label {
   justify-content: center;
 }
 
-#products {
+#products{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -138,7 +138,7 @@ label {
 }
 /* task*/
 
-#pro {
+#pro  {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -152,8 +152,8 @@ label {
   width: 380px;
   transition: all 0.2s;
 }
-
-#pro:hover {
+ 
+#pro:hover{
   transform: scale(0.98);
   border-radius: 20px;
   background-color: #42116d;

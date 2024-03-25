@@ -34,3 +34,15 @@ border-radius: 51px 51px 51px;
    height: 35rem;
    width: 35rem;
   }
+/*----------------------------------*/ 
+.skilll{
+   display: flex;
+   flex-direction: initial;
+   transition: all 2s;
+
+   
+}
+.skil:hover{
+ transform: scale(1.2);
+ box-shadow: 23px 43px 42px 42px skyblue;
+}
