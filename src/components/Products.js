@@ -32,7 +32,7 @@ const Products = () => {
     <div className="row" style={{ color: "whitesmoke" }}>
       {products.map((product) => (
         <div id="products" className="col-md-4" key={product.id}>
-          <img src={product.thumbnail} alt={product.title} />
+          <img src={product.images[0]} alt={product.title} />
           <h3>{product.title}</h3>
           <p>{product.description}</p>
           <p>Price: {product.price}</p>
