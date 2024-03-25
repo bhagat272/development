@@ -180,25 +180,21 @@ function ResponsiveAppBar() {
                 Hey I'm Sumit , a front end developer
               </p>
             </div>
-            <div className="row mt-5" style={{ paddingTop: "6.5rem" }}>
+          
+            <div className="row mt-5 ms-5" style={{ paddingTop: "6.5rem" }}>  
               <img id="sumit" className="col-md-6" src="/media/bhagat.png" />
               <p
-                className="col-md-6 mt-4 text-white"
-                style={{ fontFamily: "cursive", fontSize: "23px" }}
-              >
-                Sumit Kumar Bhagat is a passionate Mechanical Engineer graduate
-                with a keen interest in Front-End Development. He is currently
-                expanding his skill set by learning HTML, CSS, and JavaScript.
-                Sumit believes in the power of technology to solve problems and
-                make life easier. He is dedicated to creating user-friendly
-                interfaces that are not only functional but also visually
-                appealing. With a strong foundation in engineering principles
-                and an eye for design, Sumit is ready to take on the challenges
-                of the digital world. His goal is to use his unique blend of
-                skills to build innovative solutions that users love.
+                className="col-md-6  text-white"
+                style={{ fontFamily: "cursive", fontSize: "23px",padding:"1rem",background:"hsla(272, 59%, 55%, 0.508)" }}
+              > <h2 style={{color:"wheat",fontFamily:"cursive"}} >About</h2>
+                I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently, I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS. My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively.
+
+
+                <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf" > <Button variant="contained" color="success">Download cv</Button></a>
               </p>
+              
             </div>
-              <a href="/Doc" download={true} >Download</a>
+             
              
           </div>
         </div>

@@ -5,7 +5,7 @@ const Task = () => {
   const [counts, setCounts] = useState({});
   const [contactSubmitted, setContactSubmitted] = useState(false);
   const [contactNumber, setContactNumber] = useState(""); // New state variable for contact number
-
+const [showCart,setShowCart]=useState(false)
   function handleCount(id) {
     const currentValue = counts?.[id] ?? 0;
 
@@ -110,8 +110,10 @@ const Task = () => {
             </div>
           </div>
         ))}
-
-      {contactSubmitted && (
+<button onClick={() => setShowCart(!showCart)} className="btn btn-primary">
+        MY CART
+      </button>
+      {showCart && contactSubmitted && (
         <div>
           <h2>Summary:</h2>
           {Taskdata.filter((product) => counts?.[product.id] > 0).map(
