@@ -1,4 +1,5 @@
 import * as React from "react";
+import Typewriter from 'typewriter-effect';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -95,8 +96,7 @@ function ResponsiveAppBar() {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-            <Typography
+             <Typography
               variant="h5"
               noWrap
               component="a"
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              PORTFOLIO
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
@@ -223,20 +223,19 @@ function ResponsiveAppBar() {
                 <div className="col-md-5 mt-5" style={{ padding: "2.2rem",color:"wheat" }}>
                   <h4 id="cv">Sumit Kumar Bhagat</h4>
                   <h1 id="cv">I'm a Web Developer</h1>
-                  <p id="cv"> I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with
-                a fervent passion for Front-End Development. Currently, I am
-                broadening my expertise by immersing myself in HTML, CSS,
-                JavaScript, and React JS. My proficiency extends to various
-                frameworks and libraries, including Material-UI, Tailwind CSS,
-                and Bootstrap, which empower me to create responsive and
-                user-centric designs. I firmly believe in the transformative
-                power of technology to resolve challenges and simplify our
-                lives. My commitment is to the creation of interfaces that are
-                not only efficient but also visually captivating. With a solid
-                grounding in engineering and a flair for design, I am eager to
-                confront the digital era’s challenges. My aspiration is to blend
-                my varied skills to develop innovative solutions that delight
-                and serve users effectively.
+                  <p id="cv"> 
+                  <Typewriter
+        options={{
+          delay: 0, // The delay between each character in milliseconds
+        }}
+        onInit={(typewriter) => {
+          typewriter
+            .typeString('I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently, I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS. My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively.')
+            .pauseFor(2000) // Pause for 2 seconds
+             .start()
+            ;
+        }}
+      />
                   </p>
                   <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf">
                   {" "}
