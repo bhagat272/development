@@ -155,7 +155,7 @@ function ResponsiveAppBar() {
       </AppBar>
       <div>
         <div>
-          <div className="row">
+          <div>
             <div
               style={{
                 display: "flex",
@@ -179,7 +179,7 @@ function ResponsiveAppBar() {
                 Hey I'm Sumit , a front end developer
               </p>
             </div>
-            <div className="row mt-5 ms-5" style={{ paddingTop: "6.5rem" }}>
+            {/* <div className="row mt-5 ms-5" style={{  }}>
               <img id="sumit" className="col-md-6" src="/media/bhagat.png" />
               <p
                 className="col-md-6  about  text-white"
@@ -191,7 +191,7 @@ function ResponsiveAppBar() {
                 }}
               >
                 {" "}
-                <h2 style={{ color: "wheat", fontFamily: "cursive" }}>About</h2>
+                <h2 style={{  fontFamily: "cursive" }}>About</h2>
                 I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with
                 a fervent passion for Front-End Development. Currently, I am
                 broadening my expertise by immersing myself in HTML, CSS,
@@ -213,28 +213,62 @@ function ResponsiveAppBar() {
                   </Button>
                 </a>
               </p>
-            </div>
-            <h3
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                fontFamily: "cursive",
-                color: "wheat",
-                marginTop: "5rem",
-              }}
-            >
-              Skills
-            </h3>
-            <div className="row skilll ms-4">
-              {Skills.map((skill, i) => (
-                <div className="col-md-3">
-                  {" "}
-                  <p key={i}></p>
-                  <img className="skil" src={skill.image} alt="skills" />
+            </div> */}
+
+            <div className="containerr container-fluid mt-5">
+              <div className="row mt-5">
+                <div className="col-md-6 mt-5">
+                  <img className="img-fluid" src="/media/bhagat.png" alt="" />
                 </div>
-              ))}
+                <div className="col-md-5 mt-5" style={{ padding: "2.2rem",color:"wheat" }}>
+                  <h4 id="cv">Sumit Kumar Bhagat</h4>
+                  <h1 id="cv">I'm a Web Developer</h1>
+                  <p id="cv"> I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with
+                a fervent passion for Front-End Development. Currently, I am
+                broadening my expertise by immersing myself in HTML, CSS,
+                JavaScript, and React JS. My proficiency extends to various
+                frameworks and libraries, including Material-UI, Tailwind CSS,
+                and Bootstrap, which empower me to create responsive and
+                user-centric designs. I firmly believe in the transformative
+                power of technology to resolve challenges and simplify our
+                lives. My commitment is to the creation of interfaces that are
+                not only efficient but also visually captivating. With a solid
+                grounding in engineering and a flair for design, I am eager to
+                confront the digital era’s challenges. My aspiration is to blend
+                my varied skills to develop innovative solutions that delight
+                and serve users effectively.
+                  </p>
+                  <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf">
+                  {" "}
+                  <Button variant="contained" color="success">
+                    Download cv
+                  </Button>
+                </a>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <h3
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "cursive",
+              color: "wheat",
+              marginTop: "5rem",
+            }}
+          >
+            Skills
+          </h3>
+          <div className="row skilll ms-4">
+            {Skills.map((skill, i) => (
+              <div className="col-md-3">
+                {" "}
+                <p key={i}></p>
+                <img className="skil" src={skill.image} alt="skills" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
