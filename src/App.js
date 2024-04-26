@@ -31,24 +31,15 @@ import Task from "./components/Task";
 import Home from "./components/Home";
 import BasicTextFields from "./components/BasicTextFields.js";
 import ResponsiveAppBar from "./components/ResponsiveAppBar.js";
- 
+import Applications from "./components/Applications.js";
+  
 function App() {
    
   return (
     <div>
+      
       <BrowserRouter>
-        <div className="ms-2 mt-3 texter" style={{ display: "flex", gap: "8px" ,fontFamily:"cursive"}}>
-          
-            <Link to="/todo">TO-DO</Link>
-            <Link to="/form">Form</Link>
-            <Link to="/WeatherApp">WeatherApp</Link>
-            <Link to="/ShopCart">E-commerce Site</Link>
-            <Link to="/Cart">Cart</Link>
-            <Link to="/muiform">Mui Form</Link>
-            <Link to="/portfolio">Portfolio</Link>
-             
-          
-        </div>
+        
         <Routes>
           <Route element= {<TodoApp />} path="/todo"/> 
           <Route element= {<Form />} path="/form"/>
@@ -58,7 +49,7 @@ function App() {
           <Route element = {<Home/>} path="/home"/>
           <Route element = {<BasicTextFields/>} path="/muiform"/>
           <Route element = {<ResponsiveAppBar/>} path="/portfolio"/>
- 
+          <Route element={<Applications/>} path="/" />
         </Routes>
       </BrowserRouter>
     
