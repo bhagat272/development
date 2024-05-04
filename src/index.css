@@ -188,12 +188,54 @@ body {
 }
 /*#task{ 
   /* background: linear-gradient(to right,rgb(56, 28, 28),rgb(120, 120, 188),rgb(146, 96, 15)); */
-#port {
+/*#port {
   background: url(/public/media/port.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: fit-content;
+  height: fit-content; 
 }
+*/
 #portfolio {
   background-color: hsla(272, 59%, 55%, 0.508);
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* body {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+} */
+.myphoto{
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}  
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+@keyframes hide-caret {
+  0% { border-color: orange; }
+  100% { border-color: transparent; }
+}
+
+.jd {
+  overflow: hidden;
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .02em;
+  animation: 
+    typing 3.5s steps(40, end) forwards, /* Use 'forwards' to hold the end state of the animation */
+    blink-caret .75s step-end 3.5s, /* Start blinking after typing ends */
+    hide-caret 0.01s forwards 4s; /* Hide the caret after blinking ends */
 }

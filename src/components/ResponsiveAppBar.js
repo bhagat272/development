@@ -1,5 +1,5 @@
 import * as React from "react";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,145 +14,42 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Skills } from "./Skills";
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
+ 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [mode, setMode] = React.useState("Dark Mode");
+  const [bgColor, setBgColor] = React.useState(""); // Add this line
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  function bgchanger() {
+    if (mode === "Dark Mode") {
+      setMode("Light Mode");
+      setBgColor("black"); // Add this line
+    } else {
+      setMode("Dark Mode");
+      setBgColor(""); // Add this line
+    }
+  }
 
   return (
-    <div id="port">
-      <AppBar id="portfolio" position="static">
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              LOGO
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-             <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              PORTFOLIO
-            </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
-              ))}
-            </Box>
-
-            <Box sx={{ flexGrow: 0 }}>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+    <div id="port" style={{backgroundColor:bgColor}}>
+       <nav style={{background:bgColor}} id="portfolio" className="navbar navbar-expand-lg navbar-light bg-primary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Navbar</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon" />
+          </button>
+          
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <a className="nav-link" href="#">Features</a>
+              <a className="nav-link" href="#">Pricing</a>
+              <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+              <Button style={{position:"absolute",right:"23rem"}} onClick={bgchanger} variant="contained">{mode}</Button>
+            </div>
+          </div>
+        </div>
+        
+      </nav>
       <div>
         <div>
           <div>
@@ -164,12 +61,12 @@ function ResponsiveAppBar() {
                 flexDirection: "column",
               }}
             >
-              <img
+              <img className="myphoto" 
                 style={{ width: "500px", height: "500px" }}
                 src="/media/Picture1.png"
                 alt="sumit kumar bhagat"
               />
-              <p
+              <p className="ms-4.5 myphoto"
                 style={{
                   color: "wheat",
                   fontFamily: "cursive",
@@ -218,31 +115,38 @@ function ResponsiveAppBar() {
             <div className="containerr container-fluid mt-5">
               <div className="row mt-5">
                 <div className="col-md-6 mt-5">
-                  <img className="img-fluid" src="/media/bhagat.png" alt="" />
+                  <img className="img-fluid ms-1.5" src="/media/bhagat.png" alt="" />
                 </div>
-                <div className="col-md-5 mt-5" style={{ padding: "2.2rem",color:"wheat" }}>
+                <div
+                  className="col-md-5 mt-5"
+                  style={{ padding: "2.2rem", color: "wheat" }}
+                >
                   <h4 id="cv">Sumit Kumar Bhagat</h4>
-                  <h1 id="cv">I'm a Web Developer</h1>
-                  <p id="cv"> 
-                  <Typewriter
-        options={{
-          delay: 0, // The delay between each character in milliseconds
-        }}
-        onInit={(typewriter) => {
-          typewriter
-            .typeString('I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently, I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS. My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively.')
-            .pauseFor(2000) // Pause for 2 seconds
-             .start()
-            ;
-        }}
-      />
+                  <h1  id="cv" className="text-success jd">I'm a Web Developer</h1>
+                  <p id="cv">
+                    <Typewriter
+                      options={{
+                        delay: 0, // The delay between each character in milliseconds
+                      }}
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString(
+                            "I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently,I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS.My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively."
+                          )
+                          .pauseFor(2000) // Pause for 2 seconds
+                          .start();
+                      }}
+                    />
                   </p>
-                  <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf">
-                  {" "}
-                  <Button variant="contained" color="success">
-                    Download cv
-                  </Button>
-                </a>
+                  <a
+                    href="/media/Doc.pdf"
+                    download="sumitkumarbhagat_resume.pdf"
+                  >
+                    {" "}
+                    <Button variant="contained" color="success">
+                      Download cv
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -260,7 +164,7 @@ function ResponsiveAppBar() {
           >
             Skills
           </h3>
-          <div className="row skilll ms-4">
+          <div className="row skilll ms-5 ">
             {Skills.map((skill, i) => (
               <div className="col-md-3">
                 {" "}

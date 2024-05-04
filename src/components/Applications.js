@@ -14,6 +14,7 @@ const Applications = () => {
           <Link to="/Cart">Cart</Link>
           <Link to="/muiform">Mui Form</Link>
           <Link to="/portfolio">Portfolio</Link>
+          <Link to="/newcard">Card</Link>
            
         
       </div>

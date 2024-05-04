@@ -32,6 +32,7 @@ import Home from "./components/Home";
 import BasicTextFields from "./components/BasicTextFields.js";
 import ResponsiveAppBar from "./components/ResponsiveAppBar.js";
 import Applications from "./components/Applications.js";
+import Newcard from "./components/Newcard.jsx";
   
 function App() {
    
@@ -49,6 +50,7 @@ function App() {
           <Route element = {<Home/>} path="/home"/>
           <Route element = {<BasicTextFields/>} path="/muiform"/>
           <Route element = {<ResponsiveAppBar/>} path="/portfolio"/>
+          <Route element={<Newcard/>} path="/newcard"/>
           <Route element={<Applications/>} path="/" />
         </Routes>
       </BrowserRouter>
