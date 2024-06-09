@@ -18,9 +18,9 @@ const Newcard = () => {
           <p className="text-center" style={{ color: "grey" }}>
             @lindsey_jam3s
           </p>
-          <p style={{display:"flex",justifyContent:"center"}} className="row text-center ms-3">
-            Actress,musician,songwriter,and artist.DM for work inquires or <p className="text-primary">#tag</p>
-            me in your message.
+          <p style={{display:"flex",justifyContent:"center"}} className="row text-center ms-2">
+            Actress,musician,songwriter,and <br></br> artist.DM for work inquires or #tag
+            me in <br></br>your message.
           </p>
           <div className="text-center">
             <span style={{ background: "grey", padding: "7px" }}>#art</span>{" "}

@@ -46,3 +46,7 @@ border-radius: 51px 51px 51px;
  transform: scale(1.2);
  box-shadow: 23px 43px 42px 42px skyblue;
 }
+.hashtag{
+   display:inline;
+   color: blue;
+}
