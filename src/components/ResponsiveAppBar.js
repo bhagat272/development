@@ -93,7 +93,7 @@ function ResponsiveAppBar() {
                 fontFamily: "cursive",
                 fontSize: "22px",
               }}>
-                Hey I'm Sumit, a front-end developer
+                Hey I'm Sumit, a full stack developer
               </p>
             </div>
             <div className="containerr container-fluid mt-5">
