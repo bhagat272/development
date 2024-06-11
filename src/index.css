@@ -239,3 +239,6 @@ body {
     blink-caret .75s step-end 3.5s, /* Start blinking after typing ends */
     hide-caret 0.01s forwards 4s; /* Hide the caret after blinking ends */
 }
+html {
+  scroll-behavior: smooth;
+}

@@ -39,14 +39,52 @@ border-radius: 51px 51px 51px;
    display: flex;
    flex-direction: initial;
    transition: all 2s;
-
-   
 }
+
+.skil{
+   animation: slideInFromLeft 1s ease-out forwards;
+   border-radius: 23px 23px 23px 23px;
+}
+
 .skil:hover{
  transform: scale(1.2);
- box-shadow: 23px 43px 42px 42px skyblue;
+ box-shadow: 3px 1px 8px 7px skyblue;
+}
+
+@keyframes slideInFromLeft {
+   0% {
+     transform: translateX(-100%);
+     opacity: 0;
+   }
+   100% {
+     transform: translateX(0);
+     opacity: 1;
+   }
 }
 .hashtag{
    display:inline;
    color: blue;
+} 
+#contact{
+   background-color: rgb(9, 23, 57);
+}
+@media screen and (max-width: 360px) {
+   .profile {
+      margin-top: 40% !important;
+       width: 100% !important;
+       height: auto !important;
+   }
+}
+@media screen and (max-width: 360px) {
+.pro {
+      
+       width: 100% !important;
+       height: auto !important;
+   }
+}
+.proj:hover{
+   background-color: rgb(7, 19, 56);
+}
+.myphoto{
+   margin-top: 3rem;
 }
