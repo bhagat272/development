@@ -9,7 +9,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Tilt } from 'react-tilt'; // Import the Tilt component
 import ContactForm from './ContactForm';
-
+import {educationData} from './education'
 function ResponsiveAppBar() {
   const [mode, setMode] = useState("Dark Mode");
   const [bgColor, setBgColor] = useState("");
@@ -153,7 +153,42 @@ function ResponsiveAppBar() {
               </div>
             </div>
           </div>
-
+          <div className="row ms-4 me-4">
+          <h3 className="mb-4" id='skill' style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontFamily: "cursive",
+            color: "wheat",
+            marginTop: "5rem",
+          }}>
+            Education
+          </h3>
+              {educationData.map((education, index) => (
+                <div key={index} className="col-md-4 mb-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  <div style={{
+                    backgroundColor: "#333",
+                    padding: "20px",
+                    borderRadius: "10px",
+                    textAlign: "center",
+                    width: "100%",
+                    maxWidth: "300px",
+                    color: "white"
+                  }} id='edu'>
+                    <div style={{ marginBottom: "15px" }}>
+                      <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>{education.degree}</span>
+                      <div>{education.title}</div>
+                    </div>
+                    <div style={{ marginBottom: "10px" }}>
+                      <span style={{ fontWeight: "bold" }}>{education.institution}</span>
+                    </div>
+                    <div>{education.batch ? `Batch: ${education.batch}` : `Passing Year: ${education.passingYear}`}</div>
+                    <div>{education.cgpa ? `Aggregate CGPA: ${education.cgpa}` : `Percentage: ${education.percentage}`}</div>
+                    <div>{education.location}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           <h3 className="mb-4" id='skill' style={{
             display: "flex",
             justifyContent: "center",
@@ -205,6 +240,8 @@ function ResponsiveAppBar() {
               ))}
             </div>
           </div>
+         
+
         </div>
       </div>
       <ContactForm id="contact"/>

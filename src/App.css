@@ -88,3 +88,6 @@ border-radius: 51px 51px 51px;
 .myphoto{
    margin-top: 3rem;
 }
+#edu:hover{
+   transform: scale(1.5);
+}

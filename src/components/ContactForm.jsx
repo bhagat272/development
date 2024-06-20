@@ -17,13 +17,11 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Accessing environment variables
+
     const userId = process.env.REACT_APP_EMAILJS_USER_ID;
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
-    // Check if the environment variables are correctly loaded
     if (!userId || !serviceId || !templateId) {
       console.error('Environment variables are missing. Please check your .env file.');
       setMessageStatus('Error: Missing configuration. Please try again later.');
