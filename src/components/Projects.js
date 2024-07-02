@@ -39,8 +39,8 @@ export const Projects = [
       image: '/media/mern.png',
       title: 'Mern Project',
       description: 'A brief description of Project Two.',
-      link: 'https://mernstackpro.vercel.app/',
-      git:"https://github.com/bhagat272/Mern_project"
+      link: 'https://mernprojectbysumit.vercel.app/',
+      git:"https://github.com/bhagat272/MernStack_Project"
     }
     
     // Add more projects as needed
