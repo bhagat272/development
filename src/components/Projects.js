@@ -41,6 +41,13 @@ export const Projects = [
       description: 'A brief description of Project Two.',
       link: 'https://mernprojectbysumit.vercel.app/',
       git:"https://github.com/bhagat272/MernStack_Project"
+    },
+    {
+      image: '/media/blog.png',
+      title: 'BloggerBytes',
+      description: 'A blogging app.',
+      link: 'https://bloggerbytes.vercel.app/',
+      git:"https://github.com/bhagat272/BlogApp"
     }
     
     // Add more projects as needed
