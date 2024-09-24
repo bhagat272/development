@@ -48,6 +48,13 @@ export const Projects = [
       description: 'A blogging app.',
       link: 'https://bloggerbytes.vercel.app/',
       git:"https://github.com/bhagat272/BlogApp"
+    },
+    {
+      image: '/media/download.jpeg',
+      title: 'ShopEase',
+      description: 'An E-Commerce mobile app.',
+      link: 'https://appetize.io/app/b_4ltivi23xorxdf3e4gtjpygebe',
+      git:"https://github.com/bhagat272/ShopEase"
     }
     
     // Add more projects as needed

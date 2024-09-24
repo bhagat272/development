@@ -9,7 +9,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Tilt } from 'react-tilt'; // Import the Tilt component
 import ContactForm from './ContactForm';
-import {educationData} from './education'
+import { educationData } from './education'
+
 function ResponsiveAppBar() {
   const [mode, setMode] = useState("Dark Mode");
   const [bgColor, setBgColor] = useState("");
@@ -58,7 +59,7 @@ function ResponsiveAppBar() {
 
   return (
     <div id="port" style={{ backgroundColor: bgColor }}>
-      <nav style={{ background: bgColor ,position:"fixed",width:'100%',top:'0',zIndex:"1000" }} id="portfolio" className="navbar navbar-expand-lg navbar-light bg-primary">
+      <nav style={{ background: bgColor, position: "fixed", width: '100%', top: '0', zIndex: "1000" }} id="portfolio" className="navbar navbar-expand-lg navbar-light bg-primary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Sumit Bhagat</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +71,9 @@ function ResponsiveAppBar() {
               <a className="nav-link" href="#skill">Skills</a>
               <a className="nav-link" href="#project">Projects</a>
               <a className="nav-link" href="#contact" tabIndex={-1} aria-disabled="true">Contact</a>
-              <Button style={{ position: "absolute", right: "23rem" }} onClick={bgchanger} variant="contained">{mode}</Button>
+              <Button variant="contained" onClick={bgchanger} style={{ marginRight: 16 }}>
+                {mode}
+              </Button>
             </div>
           </div>
         </div>
@@ -99,25 +102,27 @@ function ResponsiveAppBar() {
             <div className="containerr container-fluid mt-5">
               <div className="row mt-5">
                 <div className="col-md-6 mt-5">
-                <Tilt className="Tilt" options={{ max: 25, scale: 1.05, speed: 400 }}>
-                  <img className="img-fluid ms-1.5" src="/media/bhagat.png" alt="" />
+                  <Tilt className="Tilt" options={{ max: 25, scale: 1.05, speed: 400 }}>
+                    <img className="img-fluid ms-1.5" src="/media/bhagat.png" alt="" />
                   </Tilt>
                 </div>
                 <div id="about" className="col-md-5 mt-5" style={{ padding: "2.2rem", color: "wheat" }}>
                   <h4 id="cv">Sumit Kumar Bhagat</h4>
                   <h1 id="cv" className="text-success jd">I'm a Web Developer</h1>
                   <p id="cv">
-                    <Typewriter 
-                      options={{ delay: 0 }}
-                      onInit={(typewriter) => {
-                        typewriter
-                          .typeString(
-                            "I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently,I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS.My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively."
-                          )
-                          .pauseFor(2000)
-                          .start();
-                      }}
-                    />
+                    <div style={{ fontFamily: "cursive", marginBottom: "1rem" }}>
+                      <Typewriter
+                        options={{ delay: 0 }}
+                        onInit={(typewriter) => {
+                          typewriter
+                            .typeString(
+                              "I am Sumit Kumar Bhagat, a Mechanical Engineering graduate with a fervent passion for Front-End Development. Currently,I am broadening my expertise by immersing myself in HTML, CSS, JavaScript, and React JS.My proficiency extends to various frameworks and libraries, including Material-UI, Tailwind CSS, and Bootstrap, which empower me to create responsive and user-centric designs. I firmly believe in the transformative power of technology to resolve challenges and simplify our lives. My commitment is to the creation of interfaces that are not only efficient but also visually captivating. With a solid grounding in engineering and a flair for design, I am eager to confront the digital era’s challenges. My aspiration is to blend my varied skills to develop innovative solutions that delight and serve users effectively."
+                            )
+                            .pauseFor(2000)
+                            .start();
+                        }}
+                      />
+                    </div>
                   </p>
                   <a href="/media/Doc.pdf" download="sumitkumarbhagat_resume.pdf">
                     {" "}
@@ -154,41 +159,41 @@ function ResponsiveAppBar() {
             </div>
           </div>
           <div className="row ms-4 me-4">
-          <h3 className="mb-4" id='skill' style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontFamily: "cursive",
-            color: "wheat",
-            marginTop: "5rem",
-          }}>
-            Education
-          </h3>
-              {educationData.map((education, index) => (
-                <div key={index} className="col-md-4 mb-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                  <div style={{
-                    backgroundColor: "#333",
-                    padding: "20px",
-                    borderRadius: "10px",
-                    textAlign: "center",
-                    width: "100%",
-                    maxWidth: "300px",
-                    color: "white"
-                  }} id='edu'>
-                    <div style={{ marginBottom: "15px" }}>
-                      <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>{education.degree}</span>
-                      <div>{education.title}</div>
-                    </div>
-                    <div style={{ marginBottom: "10px" }}>
-                      <span style={{ fontWeight: "bold" }}>{education.institution}</span>
-                    </div>
-                    <div>{education.batch ? `Batch: ${education.batch}` : `Passing Year: ${education.passingYear}`}</div>
-                    <div>{education.cgpa ? `Aggregate CGPA: ${education.cgpa}` : `Percentage: ${education.percentage}`}</div>
-                    <div>{education.location}</div>
+            <h3 className="mb-4" id='skill' style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "cursive",
+              color: "wheat",
+              marginTop: "5rem",
+            }}>
+              Education
+            </h3>
+            {educationData.map((education, index) => (
+              <div key={index} className="col-md-4 mb-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div style={{
+                  backgroundColor: "#333",
+                  padding: "20px",
+                  borderRadius: "10px",
+                  textAlign: "center",
+                  width: "100%",
+                  maxWidth: "300px",
+                  color: "white"
+                }} id='edu'>
+                  <div style={{ marginBottom: "15px" }}>
+                    <span style={{ fontSize: "1.5em", fontWeight: "bold" }}>{education.degree}</span>
+                    <div>{education.title}</div>
                   </div>
+                  <div style={{ marginBottom: "10px" }}>
+                    <span style={{ fontWeight: "bold" }}>{education.institution}</span>
+                  </div>
+                  <div>{education.batch ? `Batch: ${education.batch}` : `Passing Year: ${education.passingYear}`}</div>
+                  <div>{education.cgpa ? `Aggregate CGPA: ${education.cgpa}` : `Percentage: ${education.percentage}`}</div>
+                  <div>{education.location}</div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
           <h3 className="mb-4" id='skill' style={{
             display: "flex",
             justifyContent: "center",
@@ -240,11 +245,10 @@ function ResponsiveAppBar() {
               ))}
             </div>
           </div>
-         
 
         </div>
       </div>
-      <ContactForm id="contact"/>
+      <ContactForm id="contact" />
     </div>
   );
 }

@@ -10,14 +10,14 @@ export const educationData = [
     {
       degree: "Senior Secondary (Class XII)",
       institution: "My Own School",
-      passingYear: "2019",
+      passingYear: "2018",
       percentage: "88.40%",
       location: "Jaipur, Rajasthan"
     },
     {
       degree: "Secondary (Class X)",
-      institution: "Jaipur Academy Sr. Sec. School",
-      passingYear: "2017",
+      institution: "My Own School",
+      passingYear: "2016",
       percentage: "80.50%",
       location: "Jaipur, Rajasthan"
     }
